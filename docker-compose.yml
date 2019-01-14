@@ -6,6 +6,8 @@ services:
     working_dir: /srv
     volumes:
       - .:/srv/
+    environment:
+      - "ELASTICSEARCH_HOST=elasticsearch"
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.5.4
     environment:
