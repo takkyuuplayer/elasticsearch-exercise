@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: php
+    image: circleci/php
     tty: true
     command: bash
     working_dir: /srv
