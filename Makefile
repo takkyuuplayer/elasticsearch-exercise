@@ -6,6 +6,9 @@ PHP=$(shell which php)
 
 all: vendor update
 
+test:
+	$(PHP) ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
+
 vendor: composer.phar
 	$(COMPOSER) install
 

@@ -10,7 +10,7 @@ final class ElasticsearchTest extends TestCase
         $this->client = \Elasticsearch\ClientBuilder::create()
             ->setHosts(
                 [
-                    'elasticsearch',
+                    getenv('ELASTICSEARCH_HOST')
                 ]
             )
             ->build();
