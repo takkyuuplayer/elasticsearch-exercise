@@ -1,0 +1,8 @@
+{
+    "phpunit.php": "docker exec -it elasticsearch-exercise_app_1 php",
+    "phpunit.phpunit": "vendor/bin/phpunit",
+    "phpunit.args": [
+        "--bootstrap",
+        "vendor/autoload.php"
+    ]
+}
