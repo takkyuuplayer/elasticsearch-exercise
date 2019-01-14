@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/php
+        environment:
           - "ELASTICSEARCH_HOST=localhost"
       - image: docker.elastic.co/elasticsearch/elasticsearch:6.5.4
         environment:
