@@ -23,6 +23,8 @@ jobs:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
-        
+
+      - run: dockerize -wait tcp://localhost:9200 -timeout 1m
+
       - run: make elasticsearch
       - run: make test
